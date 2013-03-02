@@ -16,9 +16,7 @@ var crypto = require('crypto');
 
 // dependencies
 var _ = require('underscore');
-var xml2js = require('xml2js');
 var dateFormat = require('dateformat');
-var data2xml = require('data2xml');
 
 // our own
 var awssum = require('awssum');
@@ -31,9 +29,6 @@ var operations = require('./config.js');
 var MARK = 'route53: ';
 
 var version = '2011-05-05';
-
-// create our XML parser
-var parser = new xml2js.Parser({ normalize : false, trim : false, explicitRoot : true });
 
 // --------------------------------------------------------------------------------------------------------------------
 // constructor
