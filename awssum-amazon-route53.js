@@ -46,7 +46,7 @@ var Route53 = function(opts) {
 };
 
 // inherit from Amazon
-util.inherits(Route53, amazon.Amazon);
+util.inherits(Route53, amazon.AmazonSignatureV2);
 
 // --------------------------------------------------------------------------------------------------------------------
 // methods we need to implement from amazon.js
