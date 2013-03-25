@@ -1,6 +1,6 @@
 {
     "name" : "awssum-amazon-route53",
-    "description" : "NodeJS module to talk to Amazon Route53.",
+    "description" : "AwsSum plugin for Amazon Route53.",
     "version" : "1.0.0",
 
     "main" : "awssum-amazon-route53.js",
