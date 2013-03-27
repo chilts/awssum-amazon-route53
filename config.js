@@ -46,7 +46,7 @@ function bodyCreateHostedZoneRequest(options, args) {
         data.HostedZoneConfig = {};
         data.HostedZoneConfig.Comment = args.Comment;
     }
-    console.log(data2xml('CreateHostedZoneRequest', data));
+
     return data2xml('CreateHostedZoneRequest', data);
 }
 
