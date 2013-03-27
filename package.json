@@ -11,6 +11,7 @@
         "awssum-amazon" : "1.x.x"
     },
     "dependencies" : {
+        "fmt" : "0.4.x",
         "data2xml" : "0.8.x",
         "underscore" : "1.4.x",
         "dateformat" : "1.0.4-1.2.3"
