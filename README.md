@@ -20,13 +20,15 @@ var r53 = new amazonRoute53.Route53({
     'region'          : amazonS3.US_EAST_1
 });
 
-r53.ListBuckets(function(err, data) {
+r53.ListHostedZones(function(err, data) {
     fmt.dump(err, 'err');
     fmt.dump(data, 'data');
 });
 ```
 
 ## Operations ##
+
+Each example below implies you have done the initial setup as in the example above.
 
 ### CreateHostedZone ###
 
@@ -45,15 +47,30 @@ r53.CreateHostedZone(args, function(err, data) {
 
 ### GetHostedZone ###
 
-ToDo.
+```
+r53.GetHostedZone({ HostedZoneId : 'Z414BK7QE43147' }, function(err, data) {
+    fmt.dump(err, 'err');
+    fmt.dump(data, 'data');
+});
+```
 
 ### DeleteHostedZone ###
 
-ToDo.
+```
+r53.DeleteHostedZone({ HostedZoneId : 'Z414BK7QE43147' }, function(err, data) {
+    fmt.dump(err, 'err');
+    fmt.dump(data, 'data');
+});
+```
 
 ### ListHostedZones ###
 
-ToDo.
+```
+r53.ListHostedZones(function(err, data) {
+    fmt.dump(err, 'err');
+    fmt.dump(data, 'data');
+});
+```
 
 ### ChangeResourceRecordSets ###
 
@@ -61,7 +78,12 @@ ToDo.
 
 ### ListResourceRecordSets ###
 
-ToDo.
+```
+r53.ListResourceRecordSets({ HostedZoneId : 'Z414BK7QE43147' }, function(err, data) {
+    fmt.dump(err, 'err');
+    fmt.dump(data, 'data');
+});
+```
 
 ### GetChange ###
 
