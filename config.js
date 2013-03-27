@@ -10,7 +10,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 var _ = require('underscore');
-var data2xml = require('data2xml');
+var data2xml = require('data2xml')({ attrProp : '@', valProp  : '#', });
 
 // --------------------------------------------------------------------------------------------------------------------
 // utility functions
@@ -36,7 +36,7 @@ function bodyCreateHostedZoneRequest(options, args) {
 
     // create the data
     var data = {
-        _attr : { 'xmlns' : 'https://route53.amazonaws.com/doc/2011-05-05/' },
+        '@' : { 'xmlns' : 'https://route53.amazonaws.com/doc/2011-05-05/' },
         Name : args.Name,
         CallerReference : args.CallerReference,
     };
@@ -46,14 +46,14 @@ function bodyCreateHostedZoneRequest(options, args) {
         data.HostedZoneConfig = {};
         data.HostedZoneConfig.Comment = args.Comment;
     }
-
+    console.log(data2xml('CreateHostedZoneRequest', data));
     return data2xml('CreateHostedZoneRequest', data);
 }
 
 function bodyChangeResourceRecordSetsRequest(options, args) {
     // create the data structure for the XML
     var data = {
-        _attr : { 'xmlns' : 'https://route53.amazonaws.com/doc/2011-05-05/' },
+        '@' : { 'xmlns' : 'https://route53.amazonaws.com/doc/2011-05-05/' },
         ChangeBatch : {
             Changes : {
                 Change : [],
