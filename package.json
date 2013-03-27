@@ -1,7 +1,7 @@
 {
     "name" : "awssum-amazon-route53",
     "description" : "AwsSum plugin for Amazon Route53.",
-    "version" : "1.0.0",
+    "version" : "1.0.1",
 
     "main" : "awssum-amazon-route53.js",
     "engines" : {
