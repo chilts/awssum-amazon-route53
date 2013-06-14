@@ -62,8 +62,8 @@ function bodyChangeResourceRecordSetsRequest(options, args) {
     };
 
     // add the comment if we have one
-    if ( ! _.isUndefined(args.comment) ) {
-        data.ChangeBatch.Comment = args.comment;
+    if ( ! _.isUndefined(args.Comment) ) {
+        data.ChangeBatch.Comment = args.Comment;
     }
 
     _.each(args.Changes, function(change) {
@@ -72,7 +72,7 @@ function bodyChangeResourceRecordSetsRequest(options, args) {
             ResourceRecordSet : {
                 Name : change.Name,
                 Type : change.Type,
-                TTL : change. Ttl,
+                TTL : change.Ttl,
                 ResourceRecords : {
                     ResourceRecord : [],
                 },
@@ -169,6 +169,10 @@ module.exports = {
             },
             Comment : {
                 required : false,
+                type : 'special',
+            },
+            Changes : {
+                required : true,
                 type : 'special',
             },
         },
