@@ -1,3 +1,5 @@
+NOTE: AwsSum is now deprecated. Please use [aws-sdk](https://www.npmjs.org/package/aws-sdk) instead.
+
 # awssum-amazon-route53 #
 
 This is an ```AwsSum``` plugin!
